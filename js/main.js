@@ -32,3 +32,30 @@ window.addEventListener('scroll',function() {
     }
 })
 
+/* SWIPER JS - TESTIMONIALS */
+
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,   /* Passa o slider com o mousewheel */
+    keyboard: true,     /* Passa o slider com as setas do teclado */
+  });
+
+/* SCROLL REVEAL */
+
+const scrollReveal = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+    reset: true
+})
+
+scrollReveal.reveal(
+    `#home .image, #home .text,
+    #about .image, #about .text,
+    #services header, #services .card,
+    #testimonials header, #testimonials .testimonials,
+    #contact .text, #contact .links
+    `,{ interval: 100})
